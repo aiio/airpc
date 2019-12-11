@@ -13,6 +13,7 @@ func NewServer(host string, service interface{}) error {
 	if err != nil {
 		return err
 	}
+	rpc.HandleHTTP()
 	listener, err := net.Listen("tcp", host)
 	if err != nil {
 		return err
